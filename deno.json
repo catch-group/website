@@ -3,7 +3,7 @@
 		"check": "deno fmt --check && deno lint && deno check **/*.js && deno check **/*.jsx",
 		"dev": "deno run -A --watch=routes/ --watch-exclude=static/style.css,static/style.compiled.css dev.js",
 		"dev-tailwind": "deno run -A --watch=static/,routes/ --watch-exclude=static/style.css npm:@tailwindcss/cli@next -i static/style.css -o static/style.compiled.css",
-		"build": "deno run -A dev.js build",
+		"build": "deno run -A --no-npm --no-config dev.js build",
 		"start": "deno run -A main.js",
 		"update": "deno run -A -r jsr:@unabbreviated-fresh/update .",
 		"lint": "npx eslint@9.14.0",
