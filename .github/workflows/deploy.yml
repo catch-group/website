@@ -24,7 +24,7 @@ jobs:
           deno-version: v2.x
 
       - name: Build step
-        run: "DENO_NO_PACKAGE_JSON=1 && deno task --no_npm --no-config build "
+        run: "DENO_NO_PACKAGE_JSON=1 && deno task --no-npm --no-config build "
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
